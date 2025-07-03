@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ConfettiSideCannons } from "./magicui/confetti";
-import { Pointer } from "./magicui/pointer";
 
 export function LoginForm({
   className,
