@@ -71,7 +71,7 @@ export function Pointer({
             exit={{ scale: 0, opacity: 0 }}
             {...props}
           >
-            {children || <div className="text-3xl">❤️</div>}
+            {children || <div></div>}
           </motion.div>
         )}
       </AnimatePresence>
