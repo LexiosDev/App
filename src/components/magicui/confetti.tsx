@@ -4,6 +4,7 @@ import confetti from "canvas-confetti";
 
 import { Pointer } from "./pointer";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 let ButtonActive = true;
 
@@ -53,12 +54,12 @@ export function ConfettiSideCannons() {
   return (
     <div className="relative hidden md:block duration-100 hover:brightness-107">
       <button onClick={handleClick}>
-        <img
+        <Image
           src="/perfil.png"
+          fill
           alt="Image"
           className="absolute inset-0 h-full w-full bg-none object-cover rounded-2xl cursor-none"
         />
-        
       </button>
       <Pointer>
         <motion.div
