@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ConfettiSideCannons } from "./magicui/confetti";
 import { useState } from "react";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 export function LoginForm({
   className,
@@ -19,10 +20,10 @@ export function LoginForm({
       className={cn("flex flex-col gap-6", DarkMod && "dark", className)}
       {...props}
     >
-      <Card className="overflow-hidden p-0  w-[100dvw] h-[100dvh] dark:bg-blue-950 flex justify-center rounded-none items-center border-none shadow-none">
+      <Card className="overflow-hidden p-0  w-[100dvw] h-[100dvh] dark:bg-black flex justify-center rounded-none items-center border-none shadow-none">
         <Button
           onClick={() => setDarkMod((prev) => !prev)}
-          className="fixed top-4 right-4 bg-white text-black border-2 border-blue-200 hover:bg-blue-200 hover:brightness-105 dark:bg-blue-900 dark:text-white rounded-full h-10 w-10"
+          className="fixed top-4 right-4 bg-white text-black border-2 hover:bg-blue-100 dark:hover:brightness-80 dark:border-white border-black dark:bg-black dark:text-white rounded-full h-10 w-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +48,7 @@ export function LoginForm({
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold dark:text-white">
-                  Olá, bem-vindo👋
+                  Olá! <AuroraText>Bem-vindo</AuroraText>👋
                 </h1>
                 <p className="text-muted-foreground text-balance dark:text-white">
                   Logue na plataforma para ter mais funções!
@@ -80,7 +81,7 @@ export function LoginForm({
                 <Button
                   variant="outline"
                   type="button"
-                  className="w-full cursor-pointer border-1 dark:bg-blue-900 hover:brightness-85 hover:bg-white bg-white text-black border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] dark:text-white"
+                  className="w-full cursor-pointer border-1 dark:bg-blue-900 hover:dark:bg-blue-900 hover:brightness-85 hover:bg-white bg-white text-black border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] dark:text-white"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -95,7 +96,7 @@ export function LoginForm({
               </div>
               <div className="text-center text-sm dark:text-white">
                 Não consegue entrar?{" "}
-                <a href="#" className="underline underline-offset-4">
+                <a href="/suporte" className="underline underline-offset-4">
                   Suporte
                 </a>
               </div>

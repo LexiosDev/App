@@ -51,7 +51,7 @@ export function ConfettiSideCannons() {
   };
 
   return (
-    <div className="bg-muted relative hidden md:block duration-100 hover:brightness-107">
+    <div className="relative hidden md:block duration-100 hover:brightness-107">
       <button onClick={handleClick}>
         <img
           src="/perfil.png"

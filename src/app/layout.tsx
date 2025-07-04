@@ -13,12 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="overflow-hidden">
-        <div>
-          <h1 className="w-full flex items-center justify-center bg-red-400 font-bold text-2xl">
-            Em construção!
-          </h1>
-        </div>
+      <body className="overflow-hidden dark">
         {children}
       </body>
     </html>
