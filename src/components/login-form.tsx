@@ -90,7 +90,7 @@ export function LoginForm({
                     />
                   </svg>
                   <span className="sr-only dark:text-white">
-                    Entre pelo Google
+                    Entre pelo Google!
                   </span>
                 </Button>
               </div>
