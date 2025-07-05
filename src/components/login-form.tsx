@@ -8,6 +8,17 @@ import { Label } from "@/components/ui/label";
 import { ConfettiSideCannons } from "./magicui/confetti";
 import { useState } from "react";
 import { AuroraText } from "@/components/magicui/aurora-text";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Textarea } from "./ui/textarea";
 
 export function LoginForm({
   className,
@@ -94,11 +105,44 @@ export function LoginForm({
                   </span>
                 </Button>
               </div>
-              <div className="text-center text-sm dark:text-white">
+              <div className="text-center text-sm dark:text-white flex w-full items-center justify-center gap-1">
                 Não consegue entrar?{" "}
-                <a href="/suporte" className="underline underline-offset-4">
-                  Suporte
-                </a>
+                <Dialog>
+                  <form>
+                    <DialogTrigger asChild className="underline">
+                      <h1>Suporte</h1>
+                    </DialogTrigger>
+                    <DialogContent className={cn("sm:max-w-[425px]", DarkMod && "dark")}>
+                      <DialogHeader>
+                        <DialogTitle className="dark:text-white">Envie uma mensagem</DialogTitle>
+                        <DialogDescription>
+                          Adicione seu e-mail e o problema que está enfrentando
+                          para que possamos resolvê-lo o mais rápido possível.
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="grid gap-4">
+                        <div className="grid gap-3">
+                          <Label htmlFor="name-1" className="dark:text-white">E-mail</Label>
+                          <Input
+                            type="email"
+                            placeholder="meuemail@exemplo.com"
+                            className="dark:text-white"
+                          />
+                        </div>
+                        <div className="grid gap-3">
+                          <Label htmlFor="username-1" className="dark:text-white">Descrição</Label>
+                          <Textarea className="dark:text-white" placeholder="Digite aqui o problema enfrentado"></Textarea>
+                        </div>
+                      </div>
+                      <DialogFooter>
+                        <DialogClose asChild>
+                          <Button variant="outline" className=" dark:bg-blue-900 dark:text-white dark:hover:bg-blue-900 dark:hover:brightness-70">Cancelar</Button>
+                        </DialogClose>
+                        <Button className="bg-white text-black border-1 hover:brightness-95 hover:bg-white dark:bg-blue-900 dark:text-white dark:hover:brightness-80" type="submit">Enviar</Button>
+                      </DialogFooter>
+                    </DialogContent>
+                  </form>
+                </Dialog>
               </div>
             </div>
           </form>
